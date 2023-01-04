@@ -2,7 +2,7 @@ import discord
 import os
 from discord.ext import commands
 
-client=commands.Bot(command_prefix=':', self_bot=True, help_command=None)
+client=commands.Bot(command_prefix=':', self_bot=True, help_command=None, intents=discord.Intents.all())
 
 x = input("enter token: ")
 
