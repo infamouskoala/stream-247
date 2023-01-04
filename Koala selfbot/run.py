@@ -2,14 +2,14 @@ import discord
 import os
 from discord.ext import commands
 
-client=commands.Bot(command_prefix=':', self_bot=True, help_command=None, intents=discord.Intents.all())
+client=commands.Bot(command_prefix=':', self_bot=True, help_command=None)
 
-x = input("enter token: ")
+token = input("enter token: ")
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Streaming(name="1337", url="https://twitch.tv/infamouskoala"))
     os.system('clear')
-    print("Logged in")
+    await client.change_presence(activity=discord.Streaming(name="1337", url="https://twitch.tv/infamouskoala"))
+    print(f'Logged in as {client.user} ({client.user.id})')
 
-client.run(x, bot=False)
+client.run(token, bot=False)
