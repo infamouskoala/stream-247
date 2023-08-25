@@ -9,7 +9,7 @@ token = input("enter token: ")
 @client.event
 async def on_ready():
     os.system('clear')
-    await client.change_presence(activity=discord.Streaming(name="1337", url="https://twitch.tv/infamouskoala"))
+    await client.change_presence(activity=discord.Streaming(name="1337", url="https://twitch.tv/koala_from_mars"))
     print(f'Logged in as {client.user} ({client.user.id})')
 
 client.run(token, bot=False)
